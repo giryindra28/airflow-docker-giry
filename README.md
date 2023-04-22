@@ -17,11 +17,11 @@ Untuk instalasi ariflow ini, versi ariflow yang diinstall adalah versi 2.2.0 dan
 ### Running setup:
 1. Jadi unntuk penginstalan, sebelumnya haruus konfigurasi kredensial di file.env, contohnya:
     AIRFLOW_UID=50000
-    DB_NAME=dev
-    USER_NAME=user_dev
-    USER_PASSWORD=pass2022!
-    AIRFLOW_CONN_POSTGRES_DATALAKE=postgresql://user_dev:pass2022!@172.17.0.1:5433/dev
-    AIRFLOW_CONN_POSTGRES_DATAWAREHOUSE=postgresql://user_dev:pass2022!@172.17.0.1:5434/dev
+    DB_NAME=test
+    USER_NAME=giry
+    USER_PASSWORD=passgiry
+    AIRFLOW_CONN_POSTGRES_DATALAKE=postgresql://giry:passgiry@172.17.0.1:5433/test
+    AIRFLOW_CONN_POSTGRES_DATAWAREHOUSE=postgresql://giry:passgiry@172.17.0.1:5434/test
  *harap install postgresql di lokal dulu, bisa pake dbeaver 
  
 2. ubah kredensial di dalam credentials.json :
@@ -29,16 +29,16 @@ Untuk instalasi ariflow ini, versi ariflow yang diinstall adalah versi 2.2.0 dan
         "postgres_lake": {
             "host":"172.17.0.1",
             "port":"5433",
-            "database":"dev",
-            "username":"user_dev",
-            "password":"pass2022!"
+            "database":"test",
+            "username":"giry",
+            "password":"passgiry"
         },
         "postgres_warehouse": {
             "host":"172.17.0.1",
             "port":"5434",
-            "database":"dev",
-            "username":"user_dev",
-            "password":"pass2022!"
+            "database":"test",
+            "username":"giry",
+            "password":"passgiry"
         }
     }
 *sesuaikan dengan database kita di lokal 
